@@ -1,6 +1,9 @@
 package org.example;
 
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -20,6 +23,16 @@ public class Main {
         System.out.println(animal2.age());
         System.out.println(animal1.name().equals(animal4.name()));
         System.out.println(animal1);
+
+        List<Animal> animals = new ArrayList<Animal>();
+        animals.add(animal1);
+        animals.add(animal2);
+        animals.add(animal3);
+        animals.add(animal4);
+
+        Zoo zoo = new Zoo(animals);
+
+        System.out.println(zoo.totalFoodRequirement());
 
 
 
